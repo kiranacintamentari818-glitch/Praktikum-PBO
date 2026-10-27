@@ -1,0 +1,22 @@
+<mxfile host="app.diagrams.net" modified="2026-10-25T09:00:00.000Z" agent="ChatGPT" version="24.7.17">
+  <diagram id="class-diagram" name="Class Diagram">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/><mxCell id="1" parent="0"/>
+        <mxCell id="peralatan" value="&lt;b&gt;Peralatan (abstract)&lt;/b&gt;&lt;hr&gt;+ nama&lt;br&gt;# _harga_sewa&lt;br&gt;+ informasi() [abstract]&lt;br&gt;+ hitung_biaya(durasi) [abstract]&lt;br&gt;+ tampilkan()" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="500" y="80" width="320" height="150" as="geometry"/></mxCell>
+        <mxCell id="speaker" value="&lt;b&gt;Speaker&lt;/b&gt;&lt;hr&gt;+ daya&lt;br&gt;+ informasi()&lt;br&gt;+ hitung_biaya(durasi)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="250" y="300" width="250" height="100" as="geometry"/></mxCell>
+        <mxCell id="mikrofon" value="&lt;b&gt;Mikrofon&lt;/b&gt;&lt;hr&gt;+ jenis&lt;br&gt;+ informasi()&lt;br&gt;+ hitung_biaya(durasi)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="650" y="300" width="250" height="100" as="geometry"/></mxCell>
+        <mxCell id="pelanggan" value="&lt;b&gt;Pelanggan&lt;/b&gt;&lt;hr&gt;+ nama&lt;br&gt;+ informasi()" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="100" y="570" width="230" height="90" as="geometry"/></mxCell>
+        <mxCell id="penyewaan" value="&lt;b&gt;Penyewaan&lt;/b&gt;&lt;hr&gt;+ pelanggan&lt;br&gt;+ peralatan&lt;br&gt;+ durasi&lt;br&gt;+ tampilkan()" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="500" y="550" width="250" height="110" as="geometry"/></mxCell>
+        <mxCell id="pembayaran" value="&lt;b&gt;Pembayaran&lt;/b&gt;&lt;hr&gt;- __total&lt;br&gt;+ __str__()" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="950" y="570" width="230" height="90" as="geometry"/></mxCell>
+        <mxCell id="keranjang" value="&lt;b&gt;Keranjang&lt;/b&gt;&lt;hr&gt;+ daftar&lt;br&gt;+ tambah(peralatan)&lt;br&gt;+ __add__(peralatan)&lt;br&gt;+ __len__()" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="1000" y="300" width="260" height="110" as="geometry"/></mxCell>
+        <mxCell id="inh1" value="" style="endArrow=block;endFill=0;endSize=18;html=1;rounded=0;" edge="1" parent="1" source="speaker" target="peralatan"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="inh2" value="" style="endArrow=block;endFill=0;endSize=18;html=1;rounded=0;" edge="1" parent="1" source="mikrofon" target="peralatan"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="assoc" value="asosiasi" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="penyewaan" target="pelanggan"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="aggr" value="agregasi" style="startArrow=diamond;startFill=0;endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="penyewaan" target="peralatan"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="comp" value="komposisi" style="startArrow=diamond;startFill=1;endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="penyewaan" target="pembayaran"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="dep" value="menggunakan" style="dashed=1;endArrow=open;html=1;rounded=0;" edge="1" parent="1" source="keranjang" target="peralatan"><mxGeometry relative="1" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
